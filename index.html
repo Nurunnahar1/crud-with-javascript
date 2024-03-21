@@ -65,35 +65,37 @@
     <div class="modal fade" id="student-create">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body">
-                    <div class="modal-body ">
-                        <button class="btn-close" data-bs-dismiss="modal"></button>
-                        <div class="msg"></div>
-                        <form id="student-create-form">
-                            <div class="my-3">
-                                <input type="text" class="form-control" placeholder="Name" name="name" />
-                            </div>
-                            <div class="my-3">
-                                <input type="text" class="form-control" placeholder="Email" name="email" />
-                            </div>
-                            <div class="my-3">
-                                <input type="text" class="form-control" placeholder="Phone" name="phone" />
-                            </div>
-                            <div class="my-3">
-                                <input type="text" class="form-control" placeholder="location" name="location" />
-                            </div>
-                            <div class="my-3">
-                                <input type="text" class="form-control" placeholder="Photo" name="photo" />
-                            </div>
-                            <div class="my-3">
-                                <button type="submit" class="btn btn-primary">Create</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="modal-header">
+                    <h2>Create new Student</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-
+                <div class="msg"></div>
+                <div class="modal-body ">
+                    <form id="student-create-form">
+                        <div class="my-3">
+                            <input type="text" class="form-control" placeholder="Name" name="name" />
+                        </div>
+                        <div class="my-3">
+                            <input type="text" class="form-control" placeholder="Email" name="email" />
+                        </div>
+                        <div class="my-3">
+                            <input type="text" class="form-control" placeholder="Phone" name="phone" />
+                        </div>
+                        <div class="my-3">
+                            <input type="text" class="form-control" placeholder="location" name="location" />
+                        </div>
+                        <div class="my-3">
+                            <input type="text" class="form-control" placeholder="Photo" name="photo" />
+                        </div>
+                        <div class="my-3">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
             </div>
+
         </div>
+    </div>
     </div>
 
     <div class="modal fade" id="student-show">
@@ -119,7 +121,7 @@
     <script src="src/data.js"></script>
     <script src="src/functions.js"></script>
     <script src="src/models.js"></script>
-    <script src="src/main.js"></script> 
+    <script src="src/main.js"></script>
 </body>
 
 </html>
