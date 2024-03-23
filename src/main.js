@@ -1,6 +1,9 @@
 const student_create_form = document.getElementById("student-create-form");
 const msg = document.querySelector(".msg");
 
+
+
+
 student_create_form.onsubmit = (e) => {
   e.preventDefault();
 
@@ -19,13 +22,18 @@ student_create_form.onsubmit = (e) => {
     );
   } else {
     sendDataLS("students", {
+      id: createID(),
       name: name,
       email: email,
       phone: phone,
       location: location,
       photo: photo,
+      created_at: Date.now(),
     });
-      msg.innerHTML = createAlert(
-          "Student data created successfully.","success");
+    msg.innerHTML = createAlert(
+      "Student data created successfully.",
+      "success"
+    );
   }
+  e.target.reset();
 };
