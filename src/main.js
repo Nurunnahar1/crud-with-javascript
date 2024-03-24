@@ -30,6 +30,7 @@ student_create_form.onsubmit = (e) => {
       photo: photo,
       created_at: Date.now(),
     });
+    
     msg.innerHTML = createAlert(
       "Student data created successfully.",
       "success"
