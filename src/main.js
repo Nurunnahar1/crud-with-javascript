@@ -1,7 +1,10 @@
 const student_create_form = document.getElementById("student-create-form");
 const msg = document.querySelector(".msg");
 
-
+//show students data
+const getAllStudents = () => { 
+  const students = getDataLS("students");
+}
 
 
 student_create_form.onsubmit = (e) => {
@@ -30,7 +33,7 @@ student_create_form.onsubmit = (e) => {
       photo: photo,
       created_at: Date.now(),
     });
-    
+
     msg.innerHTML = createAlert(
       "Student data created successfully.",
       "success"
