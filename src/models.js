@@ -32,3 +32,12 @@ const getSingleData = (key, id) => {
       return false;
   }
 };
+
+const deleteSingleData = (key, id) => {
+     const data = JSON.parse(localStorage.getItem(key));
+
+     
+    const deleteData = data.filter((item) => item.id != id);
+    localStorage.setItem(key, JSON.stringify(deleteData));
+     
+ }

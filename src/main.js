@@ -25,7 +25,9 @@ const getAllStudents = () => {
                            }')"><i class="fa-solid fa-eye"></i></button>
 
                             <button class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                           <button class="btn btn-sm btn-danger"><i  class="fa-solid fa-trash"></i></button>
+                           <button class="btn btn-sm btn-danger" onclick="deleteStudent('${
+                             item.id
+                           }')"><i  class="fa-solid fa-trash"></i></button>
                           </td>
         </tr>`;
     });
@@ -81,4 +83,14 @@ const showSingleStudent = (id) => {
                         <h3>${name}</h3>
                         <p>${location}</p>
             `;
+};
+
+const deleteStudent = (id) => {
+  // console.log(id);
+  const conf = confirm("Are you sure you want to delete");
+
+  if (conf) {
+    deleteSingleData("students", id);
+    getAllStudents();
+  }
 };
